@@ -1,5 +1,5 @@
 You are provided with a number check whether its odd or even
-num = int(input())        
+num = float(input())        
 round(num)  
 if(num == 0):
   print("Zero")
