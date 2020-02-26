@@ -26,5 +26,5 @@ console.log(finditem)
 
 #map function
 const.cap=a.map((item)=>{
-  return(iten.name).toUppercase()})
+  return(iten.name).toUpperCase()})
 console.log(cap)
