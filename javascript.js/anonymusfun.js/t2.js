@@ -1,6 +1,6 @@
 //convert all strings to title cap using IIFE function
 
-var arr = ["jaya", "sowmi", "janani", "pavi", "ranjani"];
+var arr = ["p", "q", "s", "t", "u"];
 
 (function() {
     for (var i = 0; i < arr.length; i++) {
@@ -11,9 +11,9 @@ var arr = ["jaya", "sowmi", "janani", "pavi", "ranjani"];
 
 //convert all strings to title cap using anonymous function
 
-var ano = function(arro) {
+var b = function(a) {
     for (var i = 0; i < arr.length; i++) {
         console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
     }
 }
-ano(arr);
+b(arr);
