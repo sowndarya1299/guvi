@@ -7,6 +7,6 @@ const function1 = (a, callback) => {
   }
   return false
 }
-const somefun =(value)=>value%3==1
-function1([2,3,5,8,12], somefun) 
+const somefun =(value)=>value%5==1
+function1([6,21,56,71,96], somefun) 
 
