@@ -1,9 +1,12 @@
-var ages = [3, 10, 18, 20];
-
-function check(age) {
-  return age >= 18;
+const function1 = (a, callback) => {
+  for(var i=0;i<a.length;i++){
+    if(callback(a[i]))
+      {
+        return i
+      }
+  }
 }
+const indfun =(value)=>value==54
+fun1([42,54,78,12,65], indfun) 
 
-function myFunction() {
-  console.log(ages.findIndex(check));
-}
+//output:1
