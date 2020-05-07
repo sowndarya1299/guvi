@@ -1,9 +1,19 @@
-var ages = [3, 10, 18, 20];
-
-function check(age) {
-  return age >= 18;
+const function1 = (a, callback) => {
+var count=0;
+  for(var i=0;i<a.length;i++){
+    if(callback(a[i]))
+      {
+        count+=1;
+      }
+  }
+  if(count==a.length){
+    return true
+  }
+  else
+    {
+      return false
+    }
 }
-
-function myFunction() {
-  console.log(ages.every(check));
-}
+const mapfun =(value)=>value>0
+function1([10,20,30,40,50,60], mapfun) 
+//output:false
