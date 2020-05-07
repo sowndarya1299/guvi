@@ -14,6 +14,6 @@ var count=0;
       return false
     }
 }
-const mapfun =(value)=>value>0
-function1([10,20,30,40,50,60], mapfun) 
-//output:false
+const everyfun =(value)=>value>0
+function1([10,20,30,40,50,60], everyfun) 
+//output:true
