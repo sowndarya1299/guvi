@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-#a{
-
- height:50px;
- width:200px:
-}
-
-
-</style>
-</head>
 <body>
 
-<center><h2>RANDOM NUMBER</h2>
-
-<button onclick="myFunction()" id="a">click me</button>
+<h2>RANDOM NUMBER</h2>
+<button onclick="my()">click me</button>
 
 <p id="demo"></p>
 
 <script>
-function myFunction(){
 
-document.getElementById("demo").innerHTML =
-Math.floor(Math.random()*90000) + 10000;
+function my(){
+var storeArray = []
+
+function callRamdom(){
+    var randomNumber = Math.floor(Math.random() * 10);   
+    return randomNumber;
 }
-</script></center>
+
+function randomStore(){ 
+
+    var localValue = callRamdom()
+    var status = false;
+    for(i=0;i<10; i++){
+    var aa = storeArray[i];
+        if(aa!=localValue){
+            console.log(storeArray[i]+"hhhhh"+ localValue); 
+            if(i==9){
+                status=true;        
+            }
+
+        }   
+        else
+        break;
+
+    }
+
+    if(status==true){
+
+        storeArray.push(localValue);    
+    }
+    if(storeArray.length!=5){
+        randomStore();
+    }   
+
+    return storeArray.join("");
+}
+
+
+
+document.getElementById("demo").innerHTML = randomStore();
+
+}
+</script>
 
 </body>
 </html>
