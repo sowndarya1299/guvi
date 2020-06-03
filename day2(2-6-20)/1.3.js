@@ -1,3 +1,4 @@
+//1.3 Extract and print all the country name with alpha3Code and population in console.
 <!DOCTYPE HTML>
 <html>
     <head>
