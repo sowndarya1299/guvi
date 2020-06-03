@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>api countries 1.1 to country name with flag</title>
+        <title>country name with flag</title>
     </head>
     <body>
         
