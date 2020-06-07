@@ -1,0 +1,88 @@
+//1 - Chunk
+//Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
+
+var perChunk = 1  
+var inputArray = ['a','b','c','d','e']
+var result = inputArray.reduce((resultArray, item, index) => { 
+  const chunkIndex = Math.floor(index/perChunk)
+
+  if(!resultArray[chunkIndex]) {
+    resultArray[chunkIndex] = [] 
+  }
+ resultArray[chunkIndex].push(item)
+return resultArray}, [])
+console.log(result); 
+
+
+//2 - compact(array)
+//Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+var arr = [0,  1, false,  2,  '',  3], 
+    temp = [];
+for(let i of arr)
+    i && temp.push(i); // copy each non-empty value to the 'temp' array
+arr = temp;
+console.log(arr);
+
+
+//3 - flatconcat
+//Creates a new array concatenating and flattens array a single level deep. with any additional arrays and/or values.
+var array1=[1];function flatten(arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
+}flatten([array1, 2, [3], [[4]]]);
+
+
+//4 - drop
+//Creates a slice of array with n elements dropped from the beginning.
+function drop()
+{ var a=_.drop([1,  2,  3],n=1) console.log(a);
+}
+drop() ;
+
+
+//5 - dropRight
+//Creates a slice of array with n elements dropped from the end.
+function dropRight()
+{
+   var a=_.dropRight([1,  2,  3],n=1) 
+   console.log(a);
+   }
+dropRight();
+
+
+//6 - dropWhile
+//Creates a slice of array excluding elements dropped from the end
+const dropWhile = (arr, func) => {
+  while (arr.length > 0 && !func(arr[0])) arr = arr.slice(1);
+  return arr;
+};
+dropWhile([1, 2, 3, 4], n => n >= 3);
+
+
+//7 - findLastIndex
+//This method is like Array.prototype.findIndex except that it iterates over elements of collection from right to left.
+var arr = [1,2,3,4,5,6,6];
+var a=arr.lastIndexOf('4');
+console.log(a);
+
+
+//8 - flattenDeep
+//Recursively flattens array.
+const arr2 = [1, [2, [3, [4]],  5]];
+function flatDeep(arr2, d = 1) {
+   return d > 0 ? arr2.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), []): arr.slice();
+};
+flatDeep(arr2, Infinity);
+
+
+//9 - flattenDepth
+//Recursively flatten array up to depth times.
+var arr=[1, [2, [3, [4]],  5]];
+var n=arr.flat(2);
+console.log(n);
+
+
+//10 - fromPairs
+//this method returns an object composed from key-value pairs.
+_.fromPairs([['a', 1], ['b', 2]]);
